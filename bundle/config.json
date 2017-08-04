@@ -1,0 +1,20 @@
+{
+    "moose": {
+        "width": 26, 
+        "height": 15, 
+        "actions": [
+            { "name": "Pencil", "action": "pencil", "type": "tool" },
+            { "name": "Bucket", "action": "bucket", "type": "tool" },
+            { "name": "Undo", "action": "undo", "type": "command" },
+            { "name": "Redo", "action": "redo", "type": "command" },
+            { "name": "Save", "action": "save", "type": "save" },
+            { "name": "Download", "action": "saveAs", "type": "download" },
+            { "name": "Clear", "action": "clear", "type": "clear" }
+        ],
+        "palette": [
+            "transparent", "white", "black", "navy", "green", "red", "brown",
+            "purple", "olive", "yellow", "lime", "teal", "cyan", "blue", "fuchsia",
+            "grey", "lightgrey"
+        ]
+    }
+}

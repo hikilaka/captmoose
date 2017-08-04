@@ -1,0 +1,34 @@
+{
+  "name": "captmoose-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run-script build-js && npm run-script build-css",
+    "build-js": "browserify bundle/painter.js -o public/scripts/painter.js && browserify bundle/gallery.js -o public/scripts/gallery.js && browserify bundle/verify.js -o public/scripts/verify.js",
+    "build-css": "cp node_modules/bulma/css/* public/css/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bulma": "^0.4.0",
+    "connect-session-knex": "^1.3.4",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "gridpaint": "^1.3.0",
+    "irc": "^0.5.2",
+    "irc-colors": "^1.3.3",
+    "knex": "^0.12.9",
+    "log": "^1.4.0",
+    "moment": "^2.18.1",
+    "mysql": "^2.13.0",
+    "pug": "^2.0.0-beta11",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "serve-favicon": "^2.4.2",
+    "uglifyify": "^3.0.4",
+    "xhr": "^2.4.0"
+  }
+}

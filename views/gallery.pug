@@ -1,0 +1,32 @@
+extends layout
+
+block content
+  section.hero.is-success
+    div.hero-body
+      div.container.has-text-centered
+        h1.title Welcome to Captain Moose
+
+  section.section
+    div.container
+      h2.title Captain Moose Gallery
+      h3.subtitle Click on a moose to open it in the editor
+      hr
+      div.field.columns#gallery-options
+        div.column.is-3
+          label.label Search
+          p.control
+            input(type='text' placeholder='Filter meese').input#gallery-search
+        div.column.is-3
+          label.label Sort by
+          span.select
+            select#gallery-sort
+              option Newest
+              option Oldest
+              option Most Viewed
+      hr
+    div.container#gallery-container
+
+  section.section
+    div#gallery-scroll-update
+
+  script(src='/scripts/gallery.js' async)

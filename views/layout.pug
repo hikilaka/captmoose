@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title= title
+        
+        meta(name='description' content='')
+        meta(name='author' content='SysDevs')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+        link(rel='stylesheet' type='text/css' href='/css/bulma.css')
+        link(rel='stylesheet' type='text/css' href='/css/styles.css')
+
+        link(rel='icon' type='image/png' href='/images/favicon-32x32.png')
+        link(rel='icon' type='image/png' href='/images/favicon-16x16.png')
+
+        script(src='https://www.google.com/recaptcha/api.js')
+    body
+        nav.nav.has-shadow
+            div.nav-left
+                a(href='/').nav-item
+                    img(src='/images/moose.png' alt='Captain Moose')
+
+                mixin navitem(title, url)
+                    a(href=url, class=(active == title ? 'is-active' : '') + ' nav-item is-tab')= title
+                +navitem('Home', '/')
+                +navitem('Gallery', '/gallery')
+
+        block content
+
+        footer.footer
+            div.container
+                div.content.has-text-centered
+                    p Copyright © 2017 SysDevs

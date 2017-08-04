@@ -1,0 +1,39 @@
+extends layout
+
+block content
+  section.hero.is-success
+    div.hero-body
+      div.container.has-text-centered
+        h1.title Welcome to Captain Moose
+
+  section.section
+    div.container
+      div.moose-wrap
+        div#moose-container
+        div.block#moose-buttons
+          p.has-text-left Actions
+          a.moose-button.button.is-info.is-active#moose-pencil Pencil
+          a.moose-button.button.is-info#moose-bucket Bucket
+          a.moose-button.button.is-warning#moose-undo Undo
+          a.moose-button.button.is-warning#moose-redo Redo
+          a.moose-button.button.is-success.modal-button#moose-modal Save
+          a.moose-button.button.is-success#moose-saveAs Download
+          a.moose-button.button.is-danger#moose-clear Clear
+        div.is-center.block#moose-palette
+          p.has-text-left Palette
+
+  div.modal#moose-save-modal
+    div.modal-background
+    div.modal-card
+      header.modal-card-head
+        p.modal-card-title What's the little fella's name?
+        button.delete.moose-save-modal-close
+      section.modal-card-body
+        div.field
+          input(type='text' placeholder='moose' value='' maxLength='45').input#moose-name
+          p.help#moose-name-helper
+      footer.modal-card-foot
+        button.button.is-success#moose-save Save moose
+        a.button.moose-save-modal-close Cancel
+
+  script(src='/scripts/painter.js' async)

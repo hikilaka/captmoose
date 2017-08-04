@@ -1,0 +1,28 @@
+{
+    "app": {
+        "tos": false
+    },
+    "knex": {
+        "client": "mysql",
+        "connection": {
+            "host": "captmoose.club",
+            "user": "captmoose",
+            "password": "__PASSWORD__",
+            "database": "captmoose"
+        }
+    },
+    "recaptcha": {
+        "public": "__PUBLIC_KEY__",
+        "private": "__PRIVATE_KEY__"
+    },
+    "moose": {
+        "nameLength": 45, 
+        "width": 26, 
+        "height": 15,
+        "colors": [
+            "transparent", "white", "black", "navy", "green", "red", "brown",
+            "purple", "olive", "yellow", "lime", "teal", "cyan", "blue", "fuchsia",
+            "grey", "lightgrey"
+        ]
+    }
+}
